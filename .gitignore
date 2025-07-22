@@ -9,6 +9,18 @@ dist/
 web-build/
 expo-env.d.ts
 
+# Testing
+coverage/
+*.lcov
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
 # Native
 .kotlin/
 *.orig.*
