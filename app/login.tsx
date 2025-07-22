@@ -55,7 +55,7 @@ export default function LoginScreen() {
     >
       <View style={styles.content}>
         <View style={styles.header}>
-          <Text style={styles.title}>Đăng nhập</Text>
+          <Text style={styles.title} testID="login-title">Đăng nhập</Text>
           <Text style={styles.subtitle}>
             Chào mừng bạn quay lại! Hãy tiếp tục hành trình của bạn.
           </Text>

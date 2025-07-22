@@ -41,6 +41,7 @@ exports[`LoginScreen matches snapshot 1`] = `
             "marginBottom": 8,
           }
         }
+        testID="login-title"
       >
         Đăng nhập
       </Text>

@@ -1,20 +1,10 @@
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react-native';
-
-// Mock expo-router
-jest.mock('expo-router', () => ({
-  useRouter: () => ({
-    replace: jest.fn(),
-    push: jest.fn(),
-  }),
-}));
-
-// Mock Alert
-jest.mock('react-native/Libraries/Alert/Alert', () => ({
-  alert: jest.fn(),
-}));
-
+import { Alert } from 'react-native';
 import LoginScreen from '../login';
+
+// Mock Alert.alert
+jest.spyOn(Alert, 'alert').mockImplementation(() => {});
 
 describe('LoginScreen', () => {
   beforeEach(() => {
@@ -24,7 +14,7 @@ describe('LoginScreen', () => {
   it('renders login form correctly', () => {
     render(<LoginScreen />);
     
-    expect(screen.getByText('Đăng nhập')).toBeTruthy();
+    expect(screen.getByTestId('login-title')).toBeTruthy();
     expect(screen.getByText('Chào mừng bạn quay lại! Hãy tiếp tục hành trình của bạn.')).toBeTruthy();
     expect(screen.getByTestId('email-input')).toBeTruthy();
     expect(screen.getByTestId('password-input')).toBeTruthy();
@@ -68,14 +58,12 @@ describe('LoginScreen', () => {
   });
 
   it('shows error when fields are empty', () => {
-    const AlertMock = require('react-native/Libraries/Alert/Alert');
-    
     render(<LoginScreen />);
     
     const loginButton = screen.getByTestId('login-button');
     fireEvent.press(loginButton);
     
-    expect(AlertMock.alert).toHaveBeenCalledWith('Lỗi', 'Vui lòng nhập email và mật khẩu');
+    expect(Alert.alert).toHaveBeenCalledWith('Lỗi', 'Vui lòng nhập email và mật khẩu');
   });
 
   it('matches snapshot', () => {
