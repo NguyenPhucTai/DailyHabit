@@ -1,0 +1,287 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`WelcomeScreen matches snapshot 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#F8F9FA",
+      "flex": 1,
+      "paddingHorizontal": 20,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "marginBottom": 40,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "fontSize": 80,
+          }
+        }
+      >
+        🎯
+      </Text>
+    </View>
+    <Text
+      style={
+        {
+          "color": "#333",
+          "fontSize": 28,
+          "fontWeight": "bold",
+          "marginBottom": 16,
+          "textAlign": "center",
+        }
+      }
+    >
+      Chào mừng đến với DailyHabit!
+    </Text>
+    <Text
+      style={
+        {
+          "color": "#666",
+          "fontSize": 16,
+          "lineHeight": 24,
+          "marginBottom": 40,
+          "textAlign": "center",
+        }
+      }
+    >
+      Xây dựng thói quen tốt, từng ngày một. Theo dõi tiến trình và duy trì streak của bạn!
+    </Text>
+    <View
+      style={
+        {
+          "maxWidth": 300,
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginBottom": 16,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "fontSize": 20,
+              "marginRight": 12,
+            }
+          }
+        >
+          ✅
+        </Text>
+        <Text
+          style={
+            {
+              "color": "#555",
+              "fontSize": 16,
+            }
+          }
+        >
+          Tạo thói quen dễ dàng
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginBottom": 16,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "fontSize": 20,
+              "marginRight": 12,
+            }
+          }
+        >
+          🔥
+        </Text>
+        <Text
+          style={
+            {
+              "color": "#555",
+              "fontSize": 16,
+            }
+          }
+        >
+          Theo dõi streak hàng ngày
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginBottom": 16,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "fontSize": 20,
+              "marginRight": 12,
+            }
+          }
+        >
+          📊
+        </Text>
+        <Text
+          style={
+            {
+              "color": "#555",
+              "fontSize": 16,
+            }
+          }
+        >
+          Xem thống kê tiến trình
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "gap": 12,
+        "paddingBottom": 40,
+      }
+    }
+  >
+    <View
+      accessibilityRole="button"
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": false,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#007AFF",
+          "borderRadius": 8,
+          "justifyContent": "center",
+          "minHeight": 44,
+          "opacity": 1,
+          "paddingHorizontal": 20,
+          "paddingVertical": 12,
+        }
+      }
+      testID="get-started-button"
+    >
+      <Text
+        style={
+          {
+            "color": "white",
+            "fontSize": 16,
+            "fontWeight": "600",
+          }
+        }
+      >
+        Bắt đầu
+      </Text>
+    </View>
+    <View
+      accessibilityRole="button"
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": false,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderColor": "#007AFF",
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "justifyContent": "center",
+          "minHeight": 44,
+          "opacity": 1,
+          "paddingHorizontal": 20,
+          "paddingVertical": 12,
+        }
+      }
+      testID="skip-button"
+    >
+      <Text
+        style={
+          {
+            "color": "#007AFF",
+            "fontSize": 16,
+            "fontWeight": "600",
+          }
+        }
+      >
+        Bỏ qua
+      </Text>
+    </View>
+  </View>
+</View>
+`;
