@@ -1,0 +1,324 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`HabitCard Component matches snapshot for completed habit 1`] = `
+<View
+  accessibilityLabel="Habit: Đọc sách"
+  accessibilityRole="button"
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "borderLeftColor": "#FF6B6B",
+      "borderLeftWidth": 4,
+      "borderRadius": 12,
+      "elevation": 5,
+      "flexDirection": "row",
+      "marginHorizontal": 16,
+      "marginVertical": 8,
+      "opacity": 1,
+      "padding": 16,
+      "shadowColor": "#000",
+      "shadowOffset": {
+        "height": 2,
+        "width": 0,
+      },
+      "shadowOpacity": 0.1,
+      "shadowRadius": 3.84,
+    }
+  }
+  testID="habit-card"
+>
+  <View
+    style={
+      {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#333",
+          "fontSize": 18,
+          "fontWeight": "600",
+          "marginBottom": 4,
+        }
+      }
+    >
+      Đọc sách
+    </Text>
+    <Text
+      style={
+        {
+          "color": "#666",
+          "fontSize": 14,
+          "marginBottom": 8,
+        }
+      }
+    >
+      Đọc ít nhất 30 phút mỗi ngày
+    </Text>
+    <Text
+      style={
+        {
+          "color": "#999",
+          "fontSize": 12,
+          "fontWeight": "500",
+        }
+      }
+    >
+      Streak: 
+      5
+       ngày
+    </Text>
+  </View>
+  <View
+    accessibilityRole="checkbox"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": true,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#34C759",
+        "borderColor": "#34C759",
+        "borderRadius": 20,
+        "borderWidth": 2,
+        "height": 40,
+        "justifyContent": "center",
+        "opacity": 1,
+        "width": 40,
+      }
+    }
+    testID="habit-card-toggle"
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#999",
+            "fontSize": 20,
+          },
+          {
+            "color": "white",
+            "fontWeight": "bold",
+          },
+        ]
+      }
+    >
+      ✓
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`HabitCard Component matches snapshot for uncompleted habit 1`] = `
+<View
+  accessibilityLabel="Habit: Đọc sách"
+  accessibilityRole="button"
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "borderLeftColor": "#FF6B6B",
+      "borderLeftWidth": 4,
+      "borderRadius": 12,
+      "elevation": 5,
+      "flexDirection": "row",
+      "marginHorizontal": 16,
+      "marginVertical": 8,
+      "opacity": 1,
+      "padding": 16,
+      "shadowColor": "#000",
+      "shadowOffset": {
+        "height": 2,
+        "width": 0,
+      },
+      "shadowOpacity": 0.1,
+      "shadowRadius": 3.84,
+    }
+  }
+  testID="habit-card"
+>
+  <View
+    style={
+      {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#333",
+          "fontSize": 18,
+          "fontWeight": "600",
+          "marginBottom": 4,
+        }
+      }
+    >
+      Đọc sách
+    </Text>
+    <Text
+      style={
+        {
+          "color": "#666",
+          "fontSize": 14,
+          "marginBottom": 8,
+        }
+      }
+    >
+      Đọc ít nhất 30 phút mỗi ngày
+    </Text>
+    <Text
+      style={
+        {
+          "color": "#999",
+          "fontSize": 12,
+          "fontWeight": "500",
+        }
+      }
+    >
+      Streak: 
+      5
+       ngày
+    </Text>
+  </View>
+  <View
+    accessibilityRole="checkbox"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": false,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#F9F9F9",
+        "borderColor": "#E5E5EA",
+        "borderRadius": 20,
+        "borderWidth": 2,
+        "height": 40,
+        "justifyContent": "center",
+        "opacity": 1,
+        "width": 40,
+      }
+    }
+    testID="habit-card-toggle"
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#999",
+            "fontSize": 20,
+          },
+          false,
+        ]
+      }
+    >
+      ○
+    </Text>
+  </View>
+</View>
+`;
