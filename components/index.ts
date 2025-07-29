@@ -1,2 +1,5 @@
 export { Button } from './Button';
-export { HabitCard, type Habit } from './HabitCard';
+export { HabitCard } from './HabitCard';
+
+// Re-export types from models
+export type { Habit } from '../models';

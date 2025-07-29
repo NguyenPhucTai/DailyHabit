@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react-native';
-import { HabitCard, type Habit } from '../HabitCard';
+import { HabitCard } from '../HabitCard';
+import { Habit } from '../../models';
 
 describe('HabitCard Component', () => {
   const mockOnToggle = jest.fn();
@@ -105,8 +106,8 @@ describe('HabitCard Component', () => {
   it('renders without description when not provided', () => {
     const habitWithoutDescription: Habit = {
       ...mockHabit,
-      description: undefined,
     };
+    delete (habitWithoutDescription as any).description;
 
     render(
       <HabitCard

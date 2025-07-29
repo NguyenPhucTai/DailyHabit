@@ -1,38 +1,42 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
-import { HabitCard, type Habit } from '../../components';
-
-const mockHabits: Habit[] = [
-  {
-    id: '1',
-    name: 'Đọc sách',
-    description: 'Đọc ít nhất 30 phút mỗi ngày',
-    streak: 5,
-    isCompletedToday: false,
-    color: '#FF6B6B',
-  },
-  {
-    id: '2',
-    name: 'Tập thể dục',
-    description: 'Tập gym hoặc chạy bộ',
-    streak: 12,
-    isCompletedToday: true,
-    color: '#4ECDC4',
-  },
-  {
-    id: '3',
-    name: 'Uống nước',
-    description: 'Uống ít nhất 2L nước mỗi ngày',
-    streak: 3,
-    isCompletedToday: true,
-    color: '#45B7D1',
-  },
-];
+import { HabitCard } from '../../components';
+import { Habit } from '../../models';
+import { habitAPI } from '../../data';
 
 export default function HomeScreen() {
-  const handleToggleHabit = (habitId: string) => {
-    console.log('Toggle habit:', habitId);
-    // TODO: Implement habit toggle logic
+  const [habits, setHabits] = useState<Habit[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    loadHabits();
+  }, []);
+
+  const loadHabits = async () => {
+    try {
+      setLoading(true);
+      const habitsData = await habitAPI.getHabits();
+      setHabits(habitsData);
+    } catch (error) {
+      console.error('Error loading habits:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleToggleHabit = async (habitId: string) => {
+    try {
+      const updatedHabit = await habitAPI.toggleHabitCompletion(habitId);
+      if (updatedHabit) {
+        setHabits(prevHabits => 
+          prevHabits.map(habit => 
+            habit.id === habitId ? updatedHabit : habit
+          )
+        );
+      }
+    } catch (error) {
+      console.error('Error toggling habit:', error);
+    }
   };
 
   const handleHabitPress = (habit: Habit) => {
@@ -40,8 +44,16 @@ export default function HomeScreen() {
     // TODO: Navigate to habit details
   };
 
-  const completedToday = mockHabits.filter(h => h.isCompletedToday).length;
-  const totalHabits = mockHabits.length;
+  if (loading) {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.greeting}>Đang tải...</Text>
+      </View>
+    );
+  }
+
+  const completedToday = habits.filter(h => h.isCompletedToday).length;
+  const totalHabits = habits.length;
 
   return (
     <ScrollView style={styles.container}>
@@ -74,7 +86,7 @@ export default function HomeScreen() {
 
       <View style={styles.habits}>
         <Text style={styles.sectionTitle}>Thói quen của bạn</Text>
-        {mockHabits.map((habit) => (
+        {habits.map((habit) => (
           <HabitCard
             key={habit.id}
             habit={habit}

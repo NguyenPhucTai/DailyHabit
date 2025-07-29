@@ -1,14 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-
-export interface Habit {
-  id: string;
-  name: string;
-  description?: string;
-  streak: number;
-  isCompletedToday: boolean;
-  color: string;
-}
+import { Habit } from '../models';
 
 interface HabitCardProps {
   habit: Habit;
